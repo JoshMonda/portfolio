@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="demo.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+  <!-- Team-->
+        <section class="page-section bg-light" id="team">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+                    <h3 class="section-subheading text-muted">Fruits of team Work.<span style='font-size:20px;'>&#9989;</span></h3>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-4">
+                             <figure class="swing">
+               <img class="mx-auto rounded-circle" src="assets/img/team/7.jpg" width="220" style="margin-right: 100px;">
+                </figure>
+                        <div class="team-member">
+                            <h4>Joash Monda</h4>
+                            <p class="text-muted">Lead Developer</p>
+                            <a class="btn btn-dark btn-social mx-2" href="https://twitter.com/JoashMonda2"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://web.facebook.com/joash.monda"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/joash-monda-113708179/"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                             <figure class="swing">
+               <img class="mx-auto rounded-circle" src="assets/img/team/5.png" width="220">
+                </figure>
+                        <div class="team-member">
+    
+                            <h4>Emily Moraa</h4>
+                            <p class="text-muted">Lead Marketer</p>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                             <figure class="swing">
+               <img class="mx-auto rounded-circle" src="assets/img/team/6.jpg" width="220">
+                </figure>
+                        <div class="team-member">
+                            <h4>Castro Mbithi</h4>
+                            <p class="text-muted">Lead Mentor</p>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">
+                </p></div>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+        	
+        </script>
+        li v-for="(item, key) in items">
+    <img :src="hovered === key ? item.img.green : item.img.grey" 
+         @mouseover="hovered = key"
+         @mouseleave="hovered = null">
+    <p>{{key}}</p>
+</li>
+
+<script>
+ app = new Vue({
+        el: '#app',
+        data: {
+            hovered: null,
+            items: {
+             first:{
+                  img:{
+                     grey:require('assets/img/first-grey.png'),
+                     green:require('assets/img/first-green.png)'
+                  }
+             },
+             second:{
+                  img:{
+                     grey:require('assets/img/second-grey.png'),
+                     green:require('assets/img/second-green.png')
+                  }
+             },
+          },
+        },
+    })
+</script>
+
+</body>
+</html>
